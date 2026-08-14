@@ -6,7 +6,7 @@ An end-to-end Machine Learning pipeline utilizing XGBoost to identify fraudulent
 ![Deployment Overview](deployment.png)
 
 ## Project Structure
-'''
+```
 ├── Credit_Card_Fraud_Detection.ipynb   # Main Jupyter Notebook
 ├── Credit_Card_Fraud_Detection.pkl     # Trained XGBoost Model File
 ├── app.py                              # Web App / Deployment Script
@@ -14,7 +14,7 @@ An end-to-end Machine Learning pipeline utilizing XGBoost to identify fraudulent
 │   └── index.html                      # UI Template for deployment
 ├── README.md                           # Documentation
 └── deployment.png                      # Screenshot of UI
-'''
+```
 
 ## Summary
 - PR-AUC: 0.9151
