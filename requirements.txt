@@ -1,0 +1,6 @@
+flask
+pandas
+numpy
+joblib
+xgboost
+scikit-learn
