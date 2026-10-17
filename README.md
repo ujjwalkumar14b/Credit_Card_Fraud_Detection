@@ -17,7 +17,7 @@ An end-to-end Machine Learning pipeline utilizing XGBoost to identify fraudulent
 ```
 
 ## Summary
-- PR-AUC: 0.9151
+- PR-AUC: 0.8523
 - Fraud Class Recall: 0.95 (Captures ~95% of actual frauds)
 - Overall Accuracy: 0.99
 
