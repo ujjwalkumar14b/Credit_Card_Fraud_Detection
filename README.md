@@ -4,7 +4,7 @@ Problem Statement: To identify credit card fraudulent.
 
 Solution: An end-to-end Machine Learning pipeline designed to identify fraudulent credit card transactions in heavily imbalanced datasets, achieving 0.8523 PR-AUC, 0.95 Fraud Class Recall (Captures ~95% of actual frauds) and 0.99 Overall Accuracy.
 
-![Deployment Overview](deployment.png)
+![Deployment](deployment.png)
 
 ## Tech Stack
 - Data Science: NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn
