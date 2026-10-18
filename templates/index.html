@@ -15,13 +15,13 @@
         <form action="/predict" method="POST">
 
             <div class="mt-1">
-                <label for="category" style="min-width: 10rem;">Category</label>
+                <label for="category" style="min-width: 15rem;">Category</label>
                 <select id="category" name="category" required>
                     <option value="entertainment" selected>Entertainment</option>
                     <option value="food_dining">Food & Dining</option>
                     <option value="gas_transport">Gas & Transport</option>
                     <option value="grocery_net">Grocery Online</option>
-                    <option value="grocery_pos" selected>Grocery Store</option>
+                    <option value="grocery_pos">Grocery Store</option>
                     <option value="health_fitness">Health & Fitness</option>
                     <option value="home">Home</option>
                     <option value="kids_pets">Kids & Pets</option>
@@ -35,12 +35,12 @@
             </div>
 
             <div class="mt-1">
-                <label for="amt" style="min-width: 10rem;">Amount ($)</label>
+                <label for="amt" style="min-width: 15rem;">Amount ($)</label>
                 <input type="number" step="0.01" id="amt" name="amt" value="107.23" required>
             </div>
 
             <div class="mt-1">
-                <label for="gender" style="min-width: 10rem;">Gender</label>
+                <label for="gender" style="min-width: 15rem;">Gender</label>
                 <select id="gender" name="gender" required>
                     <option value="F" selected>Female</option>
                     <option value="M">Male</option>
@@ -48,32 +48,32 @@
             </div>
 
             <div class="mt-1">
-                <label for="lat" style="min-width: 10rem;">User Latitude</label>
+                <label for="lat" style="min-width: 15rem;">User Latitude</label>
                 <input type="number" step="any" id="lat" name="lat" value="48.8878" required>
             </div>
 
             <div class="mt-1">
-                <label for="long" style="min-width: 10rem;">User Longitude</label>
+                <label for="long" style="min-width: 15rem;">User Longitude</label>
                 <input type="number" step="any" id="long" name="long" value="-118.2105" required>
             </div>
 
             <div class="mt-1">
-                <label for="merch_lat" style="min-width: 10rem;">Merchant Latitude</label>
+                <label for="merch_lat" style="min-width: 15rem;">Merchant Latitude</label>
                 <input type="number" step="any" id="merch_lat" name="merch_lat" value="49.1590" required>
             </div>
 
             <div class="mt-1">
-                <label for="merch_long" style="min-width: 10rem;">Merchant Longitude</label>
+                <label for="merch_long" style="min-width: 15rem;">Merchant Longitude</label>
                 <input type="number" step="any" id="merch_long" name="merch_long" value="-118.1864" required>
             </div>
             
             <div class="mt-1">
-                <label for="trans_date_trans_time" style="min-width: 10rem;">Transaction Date & Time</label>
+                <label for="trans_date_trans_time" style="min-width: 15rem;">Transaction Date & Time</label>
                 <input type="datetime-local" id="trans_date_trans_time" name="trans_date_trans_time" value="2020-11-11T11:11" required>
             </div>
 
             <div class="mt-1">
-                <label for="dob" style="min-width: 10rem;">Date of Birth</label>
+                <label for="dob" style="min-width: 15rem;">Date of Birth</label>
                 <input type="date" id="dob" name="dob" value="1990-11-11" required>
             </div>
             
@@ -81,15 +81,15 @@
         </form>
 
         {% if result %}
-            <div class="result-box {% if result.is_fraud %}fraud{% else %}legit{% endif %}">
+            <div class="alert alert-danger mt-3 mb-1 fw-bold" role="alert">
                 Prediction: {{ result.label }}<br>
                 Fraud Risk Probability: {{ result.fraud_probability }}%
             </div>
         {% endif %}
 
         {% if error %}
-            <div class="alert alert-info mt-3 mb-1 fw-bold" role="alert">
-                Error processing prediction: {{ error }}
+            <div class="alert alert-danger mt-3 mb-1 fw-bold" role="alert">
+                Error in processing prediction. Try with different values.
             </div>
         {% endif %}
     </div>
